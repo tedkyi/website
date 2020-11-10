@@ -31,4 +31,45 @@ dim(iris)
 ```{r}
 head(iris)
 ```
+```{r}
+names(iris)
+```
+```{r}
+str(iris)
+```
+```{r}
+head(iris)
+```
+```{r}
+summary(iris)
+```
+Plot Data
+```{r}
+pie(table(iris$Species))
+```
+```{r}
+var(iris$Sepal.Length)
+```
+```{r}
+cov(iris$Sepal.Length, iris$Petal.Length)
+```
+```{r}
+cor(iris$Sepal.Length, iris$Petal.Length)
+```
+```{r}
+hist(iris$Sepal.Length)
+```
+```{r}
+plot(density(iris$Sepal.Length))
+```
+```{r}
+plot(iris)
+```
+```{r}
+iris_ctree <- rpart(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data=iris)
+print(iris_ctree)
+```
+```{r}
+rpart.plot::rpart.plot(iris_ctree)
+```
 
