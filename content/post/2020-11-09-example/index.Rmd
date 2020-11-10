@@ -1,0 +1,34 @@
+---
+title: Example
+author: Ted Kyi
+date: '2020-11-09'
+slug: example
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+```
+Install/load packages
+
+```{r, warning=FALSE, message=FALSE}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(Formula, partykit, party, rpart, rpartplot)
+```
+Load data
+```{r}
+data(iris)
+```
+
+Examine Data
+```{r}
+dim(iris)
+```
+
+```{r}
+head(iris)
+```
+
